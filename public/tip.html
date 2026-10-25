@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tip calculator and bill splitter – Calcdesk</title>
+<title>Tip calculator and bill splitter | Calcdesk</title>
 <meta name="description" content="Calculate the tip and split the bill between any number of people.">
 <meta name="theme-color" content="#24313d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,22 +31,23 @@
       <p>Work out the tip, and what each person pays when you split the bill.</p>
     </section>
 
-    <form class="panel" data-tool="tip">
+    <form class="tool" data-tool="tip">
+      <div class="machine">
       <div class="fields">
         <div class="field"><label for="bill">Bill amount</label><input class="input" id="bill" name="bill" type="number" inputmode="decimal" value="86.40" min="0" step="any"></div>
         <div class="field"><label for="people">People splitting</label><input class="input" id="people" name="people" type="number" inputmode="decimal" value="2" min="1" step="1"></div>
       </div>
-      <div class="field" style="margin-top:16px">
+      <div class="field">
         <fieldset>
           <legend>Tip</legend>
           <div class="chips"><label><input type="radio" name="pct" value="10"><span>10%</span></label><label><input type="radio" name="pct" value="15" checked><span>15%</span></label><label><input type="radio" name="pct" value="18"><span>18%</span></label><label><input type="radio" name="pct" value="20"><span>20%</span></label><label><input type="radio" name="pct" value="25"><span>25%</span></label><label><input type="radio" name="pct" value="custom"><span>Other</span></label></div>
         </fieldset>
       </div>
-      <div class="fields" style="margin-top:12px">
+      <div class="fields">
         <div class="field"><label for="custom">Other tip</label><div class="input-unit"><input class="input" id="custom" name="custom" type="number" inputmode="decimal" value="" min="0" max="100" step="any" placeholder="12"><span>%</span></div></div>
       </div>
-      <dl class="results"><div class="result result--lead"><dt>Each person pays</dt><dd data-out="each">–</dd></div><div class="result"><dt>Tip per person</dt><dd data-out="each-tip">–</dd></div><div class="result"><dt>Total tip</dt><dd data-out="tip">–</dd></div><div class="result"><dt>Total with tip</dt><dd data-out="total">–</dd></div></dl>
-      <p class="hint" data-note></p>
+      </div>
+      <div class="slip" aria-live="polite"><dl class="results"><div class="result result--lead"><dt>Each person pays</dt><dd data-out="each">–</dd></div><div class="result"><dt>Tip per person</dt><dd data-out="each-tip">–</dd></div><div class="result"><dt>Total tip</dt><dd data-out="tip">–</dd></div><div class="result"><dt>Total with tip</dt><dd data-out="total">–</dd></div></dl><p class="hint" data-note></p></div>
     </form>
 
     <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
@@ -56,11 +57,7 @@
       <p>Customs vary a lot by country. In the United States, 15% to 20% is usual at sit-down restaurants. In the UK and much of Europe, 10% is common, and some bills already include a service charge, so check before adding more. In Japan, tipping is not expected.</p>
 
       <h2>Tipping in your head</h2>
-      <ul>
-        <li><strong>10%:</strong> move the decimal point one place left. 10% of 86.40 is 8.64.</li>
-        <li><strong>20%:</strong> double the 10% figure. 8.64 × 2 = 17.28.</li>
-        <li><strong>15%:</strong> add half the 10% figure to itself. 8.64 + 4.32 = 12.96.</li>
-      </ul>
+      <p>Start with 10%: move the decimal point one place left, so 10% of 86.40 is 8.64. Double it for 20% (17.28). For 15%, add half of the 10% figure to itself: 8.64 + 4.32 = 12.96.</p>
 
       <h2>Questions</h2>
       <dl class="faq">

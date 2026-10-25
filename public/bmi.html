@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BMI calculator, metric and imperial – Calcdesk</title>
+<title>BMI calculator, metric and imperial | Calcdesk</title>
 <meta name="description" content="Calculate your body mass index in metric or imperial units and see the healthy weight range for your height.">
 <meta name="theme-color" content="#24313d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,7 +31,8 @@
       <p>Body mass index compares your weight to your height. Use metric or imperial units.</p>
     </section>
 
-    <form class="panel" data-tool="bmi">
+    <form class="tool" data-tool="bmi">
+      <div class="machine">
       <div class="field">
         <fieldset>
           <legend>Units</legend>
@@ -41,21 +42,20 @@
           </div>
         </fieldset>
       </div>
-      <div class="fields" data-units="metric" style="margin-top:16px">
+      <div class="fields" data-units="metric">
         <div class="field"><label for="cm">Height</label><div class="input-unit"><input class="input" id="cm" name="cm" type="number" inputmode="decimal" value="175" min="0" step="any"><span>cm</span></div></div>
         <div class="field"><label for="kg">Weight</label><div class="input-unit"><input class="input" id="kg" name="kg" type="number" inputmode="decimal" value="70" min="0" step="any"><span>kg</span></div></div>
       </div>
-      <div class="fields" data-units="imperial" style="margin-top:16px" hidden>
+      <div class="fields" data-units="imperial" hidden>
         <div class="field"><label for="ft">Height</label><div class="input-unit"><input class="input" id="ft" name="ft" type="number" inputmode="decimal" value="5" min="0" step="1"><span>ft</span></div></div>
         <div class="field"><label for="in">and</label><div class="input-unit"><input class="input" id="in" name="in" type="number" inputmode="decimal" value="9" min="0" max="11.99" step="any"><span>in</span></div></div>
         <div class="field"><label for="lb">Weight</label><div class="input-unit"><input class="input" id="lb" name="lb" type="number" inputmode="decimal" value="154" min="0" step="any"><span>lb</span></div></div>
       </div>
-      <dl class="results"><div class="result result--lead"><dt>Your BMI</dt><dd data-out="bmi">–</dd></div><div class="result"><dt>Category</dt><dd data-out="category">–</dd></div><div class="result"><dt>Healthy weight for your height</dt><dd data-out="range">–</dd></div></dl>
-      <div class="scale" aria-hidden="true">
+      </div>
+      <div class="slip" aria-live="polite"><dl class="results"><div class="result result--lead"><dt>Your BMI</dt><dd data-out="bmi">–</dd></div><div class="result"><dt>Category</dt><dd data-out="category">–</dd></div><div class="result"><dt>Healthy weight for your height</dt><dd data-out="range">–</dd></div></dl><div class="scale" aria-hidden="true">
         <div class="scale__bar"><span></span><span></span><span></span><span></span><i class="scale__marker" data-marker hidden></i></div>
         <div class="scale__labels"><span>Under 18.5</span><span>18.5–25</span><span>25–30</span><span>30+</span></div>
-      </div>
-      <p class="hint" data-note></p>
+      </div><p class="hint" data-note></p></div>
     </form>
 
     <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>

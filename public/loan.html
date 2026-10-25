@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Loan calculator: monthly payment and interest – Calcdesk</title>
+<title>Loan calculator: monthly payment and interest | Calcdesk</title>
 <meta name="description" content="Calculate the monthly payment, total interest and yearly schedule for a fixed-rate mortgage, car or personal loan.">
 <meta name="theme-color" content="#24313d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,14 +31,15 @@
       <p>See the monthly payment for a mortgage, car loan or personal loan, and how much of it goes to interest.</p>
     </section>
 
-    <form class="panel" data-tool="loan">
+    <form class="tool" data-tool="loan">
+      <div class="machine">
       <div class="fields">
         <div class="field"><label for="amount">Loan amount</label><input class="input" id="amount" name="amount" type="number" inputmode="decimal" value="250000" min="0" step="any"></div>
         <div class="field"><label for="rate">Interest rate per year</label><div class="input-unit"><input class="input" id="rate" name="rate" type="number" inputmode="decimal" value="6.5" min="0" max="100" step="any"><span>%</span></div></div>
         <div class="field"><label for="years">Term</label><div class="input-unit"><input class="input" id="years" name="years" type="number" inputmode="decimal" value="30" min="1" max="50" step="any"><span>years</span></div></div>
       </div>
-      <dl class="results"><div class="result result--lead"><dt>Monthly payment</dt><dd data-out="pay">–</dd></div><div class="result"><dt>Total interest</dt><dd data-out="interest">–</dd></div><div class="result"><dt>Total of all payments</dt><dd data-out="total">–</dd></div></dl>
-      <p class="hint" data-note></p>
+      </div>
+      <div class="slip" aria-live="polite"><dl class="results"><div class="result result--lead"><dt>Monthly payment</dt><dd data-out="pay">–</dd></div><div class="result"><dt>Total interest</dt><dd data-out="interest">–</dd></div><div class="result"><dt>Total of all payments</dt><dd data-out="total">–</dd></div></dl><p class="hint" data-note></p></div>
     </form>
 
     <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
@@ -59,11 +60,7 @@
       <p>where <code>P</code> is the amount borrowed, <code>r</code> is the yearly rate divided by 12, and <code>n</code> is the number of months. Early payments are mostly interest; as the balance falls, more of each payment goes to the loan itself.</p>
 
       <h2>Ways to pay less interest</h2>
-      <ul>
-        <li><strong>Shorter term.</strong> Try 15 years instead of 30: the monthly payment goes up, but total interest usually falls by more than half.</li>
-        <li><strong>Lower rate.</strong> Even half a percentage point makes a large difference over a long loan.</li>
-        <li><strong>Bigger deposit.</strong> Borrowing less lowers both the payment and the interest.</li>
-      </ul>
+      <p>Try changing the term to 15 years. The monthly payment goes up, but on most loans the total interest falls by more than half. A lower rate helps too: half a percentage point adds up to thousands over 30 years. And borrowing less, with a bigger deposit, cuts both the payment and the interest.</p>
       <p>This calculator does not include taxes, insurance or fees, which can add to a real monthly payment. Check the final figures with your lender.</p>
     </article>
 

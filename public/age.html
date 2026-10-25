@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Age calculator: exact age in years, months and days – Calcdesk</title>
+<title>Age calculator: exact age in years, months and days | Calcdesk</title>
 <meta name="description" content="Calculate exact age in years, months and days, total days lived, and the days until your next birthday.">
 <meta name="theme-color" content="#24313d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,13 +31,14 @@
       <p>Find an exact age in years, months and days, or the time between any two dates.</p>
     </section>
 
-    <form class="panel" data-tool="age">
+    <form class="tool" data-tool="age">
+      <div class="machine">
       <div class="fields">
         <div class="field"><label for="born">Date of birth</label><input class="input" id="born" name="born" type="date" value="1990-06-15"></div>
         <div class="field"><label for="on">Age on</label><input class="input" id="on" name="on" type="date"></div>
       </div>
-      <dl class="results"><div class="result result--lead"><dt>Age</dt><dd data-out="age">–</dd></div><div class="result"><dt>Total months</dt><dd data-out="months">–</dd></div><div class="result"><dt>Total days</dt><dd data-out="days">–</dd></div><div class="result"><dt>Next birthday in</dt><dd data-out="next">–</dd></div></dl>
-      <p class="hint" data-note></p>
+      </div>
+      <div class="slip" aria-live="polite"><dl class="results"><div class="result result--lead"><dt>Age</dt><dd data-out="age">–</dd></div><div class="result"><dt>Total months</dt><dd data-out="months">–</dd></div><div class="result"><dt>Total days</dt><dd data-out="days">–</dd></div><div class="result"><dt>Next birthday in</dt><dd data-out="next">–</dd></div></dl><p class="hint" data-note></p></div>
     </form>
 
     <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
