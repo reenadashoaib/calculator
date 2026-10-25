@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calcdesk: free online calculator with history</title>
+<meta name="description" content="A free online calculator with basic and scientific modes, keyboard support and a tape that keeps every answer.">
+<meta name="theme-color" content="#24313d">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500&amp;family=Schibsted+Grotesk:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/ads-config.js"></script>
+<script src="/assets/ads.js" defer></script>
+<script src="/assets/calculator.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="1.5" width="22" height="25" rx="5" fill="#24313d"/><rect x="6.5" y="5" width="15" height="6" rx="1.5" fill="#cfd9ca"/><circle cx="9.5" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="15.5" r="1.6" fill="#f2b705"/><circle cx="9.5" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="21" r="1.6" fill="#f2b705"/></svg>Calcdesk</a>
+  <nav class="nav" aria-label="Calculators"><ul><li><a href="/" aria-current="page">Calculator</a></li><li><a href="/percentage">Percentage</a></li><li><a href="/loan">Loan</a></li><li><a href="/bmi">BMI</a></li><li><a href="/tip">Tip</a></li><li><a href="/age">Age</a></li></ul></nav>
+</header>
+<div class="ad ad--top" data-ad="top"></div>
+<div class="page">
+  <aside class="rail rail--left"><div class="ad ad--rail-left" data-ad="railLeft"></div></aside>
+  <main class="main" id="main">
+
+    <section class="intro">
+      <h1>Calculator</h1>
+      <p>Tap the keys or type on your keyboard. Every answer goes on the tape, so you can pick it up again later.</p>
+    </section>
+
+    <section class="calc" data-calc data-mode="basic" aria-label="Calculator">
+      <div class="calc__body">
+        <div class="calc__bar">
+          <div class="segmented" role="group" aria-label="Calculator mode">
+            <button type="button" data-mode-btn="basic" aria-pressed="true">Basic</button>
+            <button type="button" data-mode-btn="sci" aria-pressed="false">Scientific</button>
+          </div>
+          <button type="button" class="angle" data-angle>Degrees</button>
+        </div>
+        <div class="display" role="group" aria-label="Display">
+          <div class="display__expr" data-expr></div>
+          <div class="display__result" data-result aria-live="polite">0</div>
+        </div>
+        <div class="keys keys--sci"><button type="button" class="key" data-k="(">(</button><button type="button" class="key" data-k=")">)</button><button type="button" class="key" data-k="!" aria-label="Factorial">x!</button><button type="button" class="key" data-k="inv" aria-label="Reciprocal">1/x</button><button type="button" class="key" data-k="sin">sin</button><button type="button" class="key" data-k="cos">cos</button><button type="button" class="key" data-k="tan">tan</button><button type="button" class="key" data-k="pi" aria-label="Pi">π</button><button type="button" class="key" data-k="ln" aria-label="Natural log">ln</button><button type="button" class="key" data-k="log" aria-label="Log base 10">log</button><button type="button" class="key" data-k="sqrt" aria-label="Square root">√</button><button type="button" class="key" data-k="e" aria-label="Euler's number">e</button><button type="button" class="key" data-k="sq" aria-label="Square">x<sup>2</sup></button><button type="button" class="key" data-k="^" aria-label="Power">x<sup>y</sup></button><button type="button" class="key" data-k="pow10" aria-label="10 to the power">10<sup>x</sup></button><button type="button" class="key" data-k="ans" aria-label="Last answer">Ans</button></div>
+        <div class="keys"><button type="button" class="key key--fn" data-k="clear" aria-label="Clear">AC</button><button type="button" class="key key--fn" data-k="back" aria-label="Delete last">⌫</button><button type="button" class="key key--fn" data-k="%" aria-label="Percent">%</button><button type="button" class="key key--op" data-k="/" aria-label="Divide">÷</button><button type="button" class="key" data-k="7">7</button><button type="button" class="key" data-k="8">8</button><button type="button" class="key" data-k="9">9</button><button type="button" class="key key--op" data-k="*" aria-label="Multiply">×</button><button type="button" class="key" data-k="4">4</button><button type="button" class="key" data-k="5">5</button><button type="button" class="key" data-k="6">6</button><button type="button" class="key key--op" data-k="-" aria-label="Subtract">−</button><button type="button" class="key" data-k="1">1</button><button type="button" class="key" data-k="2">2</button><button type="button" class="key" data-k="3">3</button><button type="button" class="key key--op" data-k="+" aria-label="Add">+</button><button type="button" class="key" data-k="sign" aria-label="Change sign">±</button><button type="button" class="key" data-k="0">0</button><button type="button" class="key" data-k="." aria-label="Decimal point">.</button><button type="button" class="key key--eq" data-k="=" aria-label="Equals">=</button></div>
+      </div>
+
+      <aside class="tape" aria-label="Tape">
+        <div class="tape__head">
+          <h2>Tape</h2>
+          <button type="button" class="tape__clear" data-tape-clear hidden>Clear tape</button>
+        </div>
+        <ol class="tape__list" data-tape></ol>
+        <p class="tape__empty" data-tape-empty>Answers appear here after you press =. Tap one to use it in your next sum.</p>
+      </aside>
+    </section>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <article class="prose">
+      <h2>How to use this calculator</h2>
+      <p>Enter a sum the way you would write it, then press <kbd>=</kbd>. The top line of the display shows what you typed; the large line shows the answer as you go, so you can check it before you finish.</p>
+      <p>After an answer, press an operator such as <kbd>+</kbd> to keep going from that result, or a number to start a new sum. Press <kbd>⌫</kbd> to remove the last thing you typed and <kbd>AC</kbd> to start again.</p>
+
+      <h3>Keyboard shortcuts</h3>
+      <table>
+        <thead><tr><th scope="col">Key</th><th scope="col">Does</th></tr></thead>
+        <tbody>
+          <tr><td><kbd>0</kbd>–<kbd>9</kbd>, <kbd>.</kbd></td><td>Type numbers</td></tr>
+          <tr><td><kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> <kbd>/</kbd> <kbd>^</kbd></td><td>Add, subtract, multiply, divide, power</td></tr>
+          <tr><td><kbd>(</kbd> <kbd>)</kbd></td><td>Brackets</td></tr>
+          <tr><td><kbd>%</kbd> <kbd>!</kbd></td><td>Percent and factorial</td></tr>
+          <tr><td><kbd>Enter</kbd> or <kbd>=</kbd></td><td>Show the answer</td></tr>
+          <tr><td><kbd>Backspace</kbd></td><td>Delete the last entry</td></tr>
+          <tr><td><kbd>Esc</kbd></td><td>Clear everything</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Order of operations</h3>
+      <p>The calculator follows the standard order: brackets first, then powers, then multiplication and division, then addition and subtraction. So <code>2 + 3 × 4</code> is 14, not 20. Use brackets when you want a different order: <code>(2 + 3) × 4</code> is 20.</p>
+
+      <h3>Scientific mode</h3>
+      <p>Switch to Scientific for trigonometry, logarithms, powers, roots and factorials. Trig functions use degrees unless you switch the angle unit to radians. A number written next to a bracket or π multiplies it, so <code>2π</code> is the same as <code>2 × π</code>.</p>
+
+      <h2>Questions</h2>
+      <dl class="faq">
+        <dt>How does the percent key work?</dt>
+        <dd>On its own, <code>25%</code> is 0.25. After a plus or minus it works like a shop calculator: <code>80 + 10%</code> adds 10% of 80 and gives 88, and <code>80 − 25%</code> gives 60.</dd>
+        <dt>Where is my tape saved?</dt>
+        <dd>Only in this browser, on this device. It is never sent anywhere. Clear it any time with Clear tape.</dd>
+        <dt>Why does the answer say "Can't divide by zero"?</dt>
+        <dd>Dividing by zero has no answer. Change the number after the ÷ and press = again.</dd>
+        <dt>How precise are the answers?</dt>
+        <dd>Answers are rounded to 12 significant digits, which hides the tiny rounding errors computers make with decimals, such as 0.1 + 0.2.</dd>
+      </dl>
+    </article>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <section class="prose"><h2>More calculators</h2>
+<ul class="tool-list"><li><a href="/percentage">Percentage calculator</a><span>Percent of a number, percent of a total, and percent change.</span></li><li><a href="/loan">Loan calculator</a><span>Monthly payment, total interest and a yearly schedule.</span></li><li><a href="/bmi">BMI calculator</a><span>Body mass index in metric or imperial units.</span></li><li><a href="/tip">Tip calculator</a><span>Tip and total per person when you split the bill.</span></li><li><a href="/age">Age calculator</a><span>Exact age in years, months and days, and days to your next birthday.</span></li></ul></section>
+
+  </main>
+  <aside class="rail rail--right"><div class="ad ad--rail-right" data-ad="railRight"></div></aside>
+</div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>© 2026 Calcdesk. Free online calculators.</p>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

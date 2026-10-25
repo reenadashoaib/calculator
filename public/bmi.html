@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMI calculator, metric and imperial – Calcdesk</title>
+<meta name="description" content="Calculate your body mass index in metric or imperial units and see the healthy weight range for your height.">
+<meta name="theme-color" content="#24313d">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500&amp;family=Schibsted+Grotesk:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/ads-config.js"></script>
+<script src="/assets/ads.js" defer></script>
+<script src="/assets/tools.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="1.5" width="22" height="25" rx="5" fill="#24313d"/><rect x="6.5" y="5" width="15" height="6" rx="1.5" fill="#cfd9ca"/><circle cx="9.5" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="15.5" r="1.6" fill="#f2b705"/><circle cx="9.5" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="21" r="1.6" fill="#f2b705"/></svg>Calcdesk</a>
+  <nav class="nav" aria-label="Calculators"><ul><li><a href="/">Calculator</a></li><li><a href="/percentage">Percentage</a></li><li><a href="/loan">Loan</a></li><li><a href="/bmi" aria-current="page">BMI</a></li><li><a href="/tip">Tip</a></li><li><a href="/age">Age</a></li></ul></nav>
+</header>
+<div class="ad ad--top" data-ad="top"></div>
+<div class="page">
+  <aside class="rail rail--left"><div class="ad ad--rail-left" data-ad="railLeft"></div></aside>
+  <main class="main" id="main">
+
+    <section class="intro">
+      <h1>BMI calculator</h1>
+      <p>Body mass index compares your weight to your height. Use metric or imperial units.</p>
+    </section>
+
+    <form class="panel" data-tool="bmi">
+      <div class="field">
+        <fieldset>
+          <legend>Units</legend>
+          <div class="chips">
+            <label><input type="radio" name="units" value="metric" checked><span>Metric (cm, kg)</span></label>
+            <label><input type="radio" name="units" value="imperial"><span>Imperial (ft, in, lb)</span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="fields" data-units="metric" style="margin-top:16px">
+        <div class="field"><label for="cm">Height</label><div class="input-unit"><input class="input" id="cm" name="cm" type="number" inputmode="decimal" value="175" min="0" step="any"><span>cm</span></div></div>
+        <div class="field"><label for="kg">Weight</label><div class="input-unit"><input class="input" id="kg" name="kg" type="number" inputmode="decimal" value="70" min="0" step="any"><span>kg</span></div></div>
+      </div>
+      <div class="fields" data-units="imperial" style="margin-top:16px" hidden>
+        <div class="field"><label for="ft">Height</label><div class="input-unit"><input class="input" id="ft" name="ft" type="number" inputmode="decimal" value="5" min="0" step="1"><span>ft</span></div></div>
+        <div class="field"><label for="in">and</label><div class="input-unit"><input class="input" id="in" name="in" type="number" inputmode="decimal" value="9" min="0" max="11.99" step="any"><span>in</span></div></div>
+        <div class="field"><label for="lb">Weight</label><div class="input-unit"><input class="input" id="lb" name="lb" type="number" inputmode="decimal" value="154" min="0" step="any"><span>lb</span></div></div>
+      </div>
+      <dl class="results"><div class="result result--lead"><dt>Your BMI</dt><dd data-out="bmi">–</dd></div><div class="result"><dt>Category</dt><dd data-out="category">–</dd></div><div class="result"><dt>Healthy weight for your height</dt><dd data-out="range">–</dd></div></dl>
+      <div class="scale" aria-hidden="true">
+        <div class="scale__bar"><span></span><span></span><span></span><span></span><i class="scale__marker" data-marker hidden></i></div>
+        <div class="scale__labels"><span>Under 18.5</span><span>18.5–25</span><span>25–30</span><span>30+</span></div>
+      </div>
+      <p class="hint" data-note></p>
+    </form>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <article class="prose">
+      <h2>What the numbers mean</h2>
+      <table>
+        <thead><tr><th scope="col">BMI</th><th scope="col">Category for adults</th></tr></thead>
+        <tbody>
+          <tr><td>Below 18.5</td><td>Underweight</td></tr>
+          <tr><td>18.5 to 24.9</td><td>Healthy weight</td></tr>
+          <tr><td>25 to 29.9</td><td>Overweight</td></tr>
+          <tr><td>30 or more</td><td>Obesity</td></tr>
+        </tbody>
+      </table>
+      <p>These are the World Health Organization ranges for adults aged 18 and over. Children and teenagers are measured against growth charts for their age and sex instead.</p>
+
+      <h2>The formula</h2>
+      <p>BMI is weight in kilograms divided by height in metres squared: <code>BMI = kg ÷ m²</code>. Someone 1.75 m tall who weighs 70 kg has a BMI of 70 ÷ (1.75 × 1.75) = 22.9. In imperial units the calculator converts pounds and inches to metric first.</p>
+
+      <h2>Limits of BMI</h2>
+      <p>BMI does not tell muscle from fat, so athletes can score as overweight. It also says nothing about where fat is carried, and the same number can mean different health risks for different ethnic groups and ages. Treat it as a starting point, and talk to a doctor about what is healthy for you.</p>
+    </article>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <section class="prose"><h2>More calculators</h2>
+<ul class="tool-list"><li><a href="/">Calculator</a><span>Everyday and scientific maths with a running tape of answers.</span></li><li><a href="/percentage">Percentage calculator</a><span>Percent of a number, percent of a total, and percent change.</span></li><li><a href="/loan">Loan calculator</a><span>Monthly payment, total interest and a yearly schedule.</span></li><li><a href="/tip">Tip calculator</a><span>Tip and total per person when you split the bill.</span></li><li><a href="/age">Age calculator</a><span>Exact age in years, months and days, and days to your next birthday.</span></li></ul></section>
+
+  </main>
+  <aside class="rail rail--right"><div class="ad ad--rail-right" data-ad="railRight"></div></aside>
+</div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>© 2026 Calcdesk. Free online calculators.</p>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

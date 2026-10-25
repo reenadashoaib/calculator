@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Percentage calculator – Calcdesk</title>
+<meta name="description" content="Work out a percent of a number, what percent one number is of another, and percent increase or decrease.">
+<meta name="theme-color" content="#24313d">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500&amp;family=Schibsted+Grotesk:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/ads-config.js"></script>
+<script src="/assets/ads.js" defer></script>
+<script src="/assets/tools.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="1.5" width="22" height="25" rx="5" fill="#24313d"/><rect x="6.5" y="5" width="15" height="6" rx="1.5" fill="#cfd9ca"/><circle cx="9.5" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="15.5" r="1.6" fill="#f2b705"/><circle cx="9.5" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="21" r="1.6" fill="#f2b705"/></svg>Calcdesk</a>
+  <nav class="nav" aria-label="Calculators"><ul><li><a href="/">Calculator</a></li><li><a href="/percentage" aria-current="page">Percentage</a></li><li><a href="/loan">Loan</a></li><li><a href="/bmi">BMI</a></li><li><a href="/tip">Tip</a></li><li><a href="/age">Age</a></li></ul></nav>
+</header>
+<div class="ad ad--top" data-ad="top"></div>
+<div class="page">
+  <aside class="rail rail--left"><div class="ad ad--rail-left" data-ad="railLeft"></div></aside>
+  <main class="main" id="main">
+
+    <section class="intro">
+      <h1>Percentage calculator</h1>
+      <p>Three everyday percentage questions. Type in any box and the answer updates.</p>
+    </section>
+
+    <div class="panel">
+      <form class="sentence" data-pct="of">
+        <h2>Percent of a number</h2>
+        <div class="sentence__line">
+          <span>What is</span>
+          <input class="input" type="number" inputmode="decimal" value="15" data-a aria-label="Percent">
+          <span>% of</span>
+          <input class="input" type="number" inputmode="decimal" value="240" data-b aria-label="Number">
+          <span>?</span>
+          <output class="sentence__out" data-out>–</output>
+        </div>
+      </form>
+      <form class="sentence" data-pct="is">
+        <h2>Percent of a total</h2>
+        <div class="sentence__line">
+          <input class="input" type="number" inputmode="decimal" value="36" data-a aria-label="Part">
+          <span>is what % of</span>
+          <input class="input" type="number" inputmode="decimal" value="240" data-b aria-label="Total">
+          <span>?</span>
+          <output class="sentence__out" data-out>–</output>
+        </div>
+        <p class="hint" data-note></p>
+      </form>
+      <form class="sentence" data-pct="change">
+        <h2>Percent change</h2>
+        <div class="sentence__line">
+          <span>From</span>
+          <input class="input" type="number" inputmode="decimal" value="80" data-a aria-label="Starting value">
+          <span>to</span>
+          <input class="input" type="number" inputmode="decimal" value="92" data-b aria-label="New value">
+          <span>is</span>
+          <output class="sentence__out" data-out>–</output>
+        </div>
+        <p class="hint" data-note></p>
+      </form>
+    </div>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <article class="prose">
+      <h2>The formulas</h2>
+      <ul>
+        <li><strong>Percent of a number:</strong> part = percent ÷ 100 × number. 15% of 240 is 0.15 × 240 = 36.</li>
+        <li><strong>Percent of a total:</strong> percent = part ÷ total × 100. 36 out of 240 is 36 ÷ 240 × 100 = 15%.</li>
+        <li><strong>Percent change:</strong> change = (new − old) ÷ old × 100. Going from 80 to 92 is (92 − 80) ÷ 80 × 100 = 15% more.</li>
+      </ul>
+
+      <h2>Common uses</h2>
+      <h3>Discounts</h3>
+      <p>A 30% discount on a price of 60 takes off 30% of 60, which is 18, so you pay 42. Quick check: paying 70% of 60 gives the same 42.</p>
+      <h3>Pay rises and price changes</h3>
+      <p>Use percent change to compare two values over time. A salary that goes from 42,000 to 45,150 has risen by 7.5%.</p>
+      <h3>Test scores</h3>
+      <p>Use percent of a total to turn a score into a percentage. 43 correct out of 50 questions is 86%.</p>
+
+      <h2>Questions</h2>
+      <dl class="faq">
+        <dt>Is a percent increase followed by the same percent decrease back to the start?</dt>
+        <dd>No. Add 10% to 100 and you get 110; take 10% off 110 and you get 99. The second percentage is of a bigger number.</dd>
+        <dt>What is the difference between percent and percentage points?</dt>
+        <dd>If an interest rate moves from 4% to 5%, it rose by 1 percentage point, but by 25 percent of its old value.</dd>
+      </dl>
+    </article>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <section class="prose"><h2>More calculators</h2>
+<ul class="tool-list"><li><a href="/">Calculator</a><span>Everyday and scientific maths with a running tape of answers.</span></li><li><a href="/loan">Loan calculator</a><span>Monthly payment, total interest and a yearly schedule.</span></li><li><a href="/bmi">BMI calculator</a><span>Body mass index in metric or imperial units.</span></li><li><a href="/tip">Tip calculator</a><span>Tip and total per person when you split the bill.</span></li><li><a href="/age">Age calculator</a><span>Exact age in years, months and days, and days to your next birthday.</span></li></ul></section>
+
+  </main>
+  <aside class="rail rail--right"><div class="ad ad--rail-right" data-ad="railRight"></div></aside>
+</div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>© 2026 Calcdesk. Free online calculators.</p>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tip calculator and bill splitter – Calcdesk</title>
+<meta name="description" content="Calculate the tip and split the bill between any number of people.">
+<meta name="theme-color" content="#24313d">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500&amp;family=Schibsted+Grotesk:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="/assets/styles.css">
+<script src="/assets/ads-config.js"></script>
+<script src="/assets/ads.js" defer></script>
+<script src="/assets/tools.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="3" y="1.5" width="22" height="25" rx="5" fill="#24313d"/><rect x="6.5" y="5" width="15" height="6" rx="1.5" fill="#cfd9ca"/><circle cx="9.5" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="15.5" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="15.5" r="1.6" fill="#f2b705"/><circle cx="9.5" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="14" cy="21" r="1.6" fill="#f4f6f8"/><circle cx="18.5" cy="21" r="1.6" fill="#f2b705"/></svg>Calcdesk</a>
+  <nav class="nav" aria-label="Calculators"><ul><li><a href="/">Calculator</a></li><li><a href="/percentage">Percentage</a></li><li><a href="/loan">Loan</a></li><li><a href="/bmi">BMI</a></li><li><a href="/tip" aria-current="page">Tip</a></li><li><a href="/age">Age</a></li></ul></nav>
+</header>
+<div class="ad ad--top" data-ad="top"></div>
+<div class="page">
+  <aside class="rail rail--left"><div class="ad ad--rail-left" data-ad="railLeft"></div></aside>
+  <main class="main" id="main">
+
+    <section class="intro">
+      <h1>Tip calculator</h1>
+      <p>Work out the tip, and what each person pays when you split the bill.</p>
+    </section>
+
+    <form class="panel" data-tool="tip">
+      <div class="fields">
+        <div class="field"><label for="bill">Bill amount</label><input class="input" id="bill" name="bill" type="number" inputmode="decimal" value="86.40" min="0" step="any"></div>
+        <div class="field"><label for="people">People splitting</label><input class="input" id="people" name="people" type="number" inputmode="decimal" value="2" min="1" step="1"></div>
+      </div>
+      <div class="field" style="margin-top:16px">
+        <fieldset>
+          <legend>Tip</legend>
+          <div class="chips"><label><input type="radio" name="pct" value="10"><span>10%</span></label><label><input type="radio" name="pct" value="15" checked><span>15%</span></label><label><input type="radio" name="pct" value="18"><span>18%</span></label><label><input type="radio" name="pct" value="20"><span>20%</span></label><label><input type="radio" name="pct" value="25"><span>25%</span></label><label><input type="radio" name="pct" value="custom"><span>Other</span></label></div>
+        </fieldset>
+      </div>
+      <div class="fields" style="margin-top:12px">
+        <div class="field"><label for="custom">Other tip</label><div class="input-unit"><input class="input" id="custom" name="custom" type="number" inputmode="decimal" value="" min="0" max="100" step="any" placeholder="12"><span>%</span></div></div>
+      </div>
+      <dl class="results"><div class="result result--lead"><dt>Each person pays</dt><dd data-out="each">–</dd></div><div class="result"><dt>Tip per person</dt><dd data-out="each-tip">–</dd></div><div class="result"><dt>Total tip</dt><dd data-out="tip">–</dd></div><div class="result"><dt>Total with tip</dt><dd data-out="total">–</dd></div></dl>
+      <p class="hint" data-note></p>
+    </form>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <article class="prose">
+      <h2>How much to tip</h2>
+      <p>Customs vary a lot by country. In the United States, 15% to 20% is usual at sit-down restaurants. In the UK and much of Europe, 10% is common, and some bills already include a service charge, so check before adding more. In Japan, tipping is not expected.</p>
+
+      <h2>Tipping in your head</h2>
+      <ul>
+        <li><strong>10%:</strong> move the decimal point one place left. 10% of 86.40 is 8.64.</li>
+        <li><strong>20%:</strong> double the 10% figure. 8.64 × 2 = 17.28.</li>
+        <li><strong>15%:</strong> add half the 10% figure to itself. 8.64 + 4.32 = 12.96.</li>
+      </ul>
+
+      <h2>Questions</h2>
+      <dl class="faq">
+        <dt>Should the tip be on the total before or after tax?</dt>
+        <dd>Many people tip on the amount before tax. Enter the pre-tax amount as the bill if you prefer that.</dd>
+        <dt>Why does the split not add up exactly?</dt>
+        <dd>Per-person amounts are rounded to two decimal places, so they can differ from the total by a cent.</dd>
+      </dl>
+    </article>
+
+    <div class="ad-row"><div class="ad ad--tile" data-ad="tile"></div><div class="ad ad--tile" data-ad="tile"></div></div>
+
+    <section class="prose"><h2>More calculators</h2>
+<ul class="tool-list"><li><a href="/">Calculator</a><span>Everyday and scientific maths with a running tape of answers.</span></li><li><a href="/percentage">Percentage calculator</a><span>Percent of a number, percent of a total, and percent change.</span></li><li><a href="/loan">Loan calculator</a><span>Monthly payment, total interest and a yearly schedule.</span></li><li><a href="/bmi">BMI calculator</a><span>Body mass index in metric or imperial units.</span></li><li><a href="/age">Age calculator</a><span>Exact age in years, months and days, and days to your next birthday.</span></li></ul></section>
+
+  </main>
+  <aside class="rail rail--right"><div class="ad ad--rail-right" data-ad="railRight"></div></aside>
+</div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>© 2026 Calcdesk. Free online calculators.</p>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
